@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Google Font Importing */
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./Assets/Font/ProductSans-Thin.woff");
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Google Sans";
+  src: url("./Assets/Font/ProductSans-Regular.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./Assets/Font/ProductSans-Medium.woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./Assets/Font/ProductSans-Bold.woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./Assets/Font/ProductSans-Black.woff");
+  font-weight: 900;
+}
+
+/*------------------------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Google Sans', Arial, Helvetica, sans-serif;
 }
