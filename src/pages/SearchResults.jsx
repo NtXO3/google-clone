@@ -21,7 +21,6 @@ const SearchResults = () => {
     const { data } = useGoogleSearch(term) // LIVE API CALL
 
     // const data = Response
-    console.log(data)
     return (
         <div className='search-page'>
             <header className="search-page__header">

@@ -13,11 +13,13 @@ const Search = ({ hideButtons= false }) => {
 
     const search = (e) => {
         e.preventDefault()
-        dispatch({
-            type: actionTypes.SET_SEARCH_TERM,
-            term: input
-        })
-        navigate('/search')
+        if (input.length >= 1) {
+            dispatch({
+                type: actionTypes.SET_SEARCH_TERM,
+                term: input
+            })
+            navigate('/search')
+        }
     }
 
     return (
