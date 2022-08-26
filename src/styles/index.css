@@ -127,6 +127,7 @@ Home Page
 }
 
 .home__logo {
+    width: 272px;
     margin-bottom: 1.5rem;
 }
 
@@ -344,4 +345,86 @@ footer {
 
 .footer__location:hover {
     text-decoration: none;
+}
+
+/* 
+
+Dark System
+
+
+*/
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: #202124;
+    }
+
+    .search__input {
+        border: 1px solid #5f6368;
+        background-color: #202124;
+        color: #e8eaed;
+    }
+
+    .search__input:hover, .search__input:focus {
+        background-color: #303134;
+        box-shadow: 0 1px 6px 0 #171717;
+        border-color: #303134;
+    }
+
+    .header__link, .header__menu--btn {
+        color: white;
+    }
+
+    footer {
+        background-color: #171717;
+    }
+
+    .footer__row + .footer__row {
+        border-top: 1px solid #3c4043;
+    }
+
+    .footer__link {
+        color: #999da2;
+    }
+
+    .home__search--btn {
+        background-color: #303134;
+        border-color: #303134;
+        color: #e8eaed;
+    }
+
+    .home__search--btn:hover {
+        border: 1px solid #5f6368;
+        box-shadow: 0 1px 3px rgb(23 23 23 / 24%);
+        color: #e8eaed;
+    }
+
+    .search__header--link {
+        color: #969ba1;
+    }
+
+    .search__header--link.active {
+        color: #8ab4f8;
+        border-color: #8ab4f8;
+    }
+
+    .search__header {
+        border-bottom: 1px solid #3c4043;
+    }
+
+    .search__result--link {
+        color: #bdc1c6;
+    }
+
+    .search__result--title {
+        color: #8ab4f8;
+    }
+
+    .search__result--title:visited {
+        color: #c58af9;
+    }
+
+    .search__result--para {
+        color: #bdc1c6;
+    }
 }

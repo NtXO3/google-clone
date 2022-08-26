@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Logo from 'assets/static/Logo.png'
+import LogoWhite from 'assets/static/LogoWhite.png'
 import { SearchInput } from 'components/common/SearchInput';
 import { formatSearchQuery, useSearchState } from 'services/search';
 
@@ -11,7 +12,11 @@ export const HomeMain: React.FC<HomeMainProps> = () => {
 
     return (
         <div className="home__main--wrapper">
-            <img src={Logo} alt="" className="home__logo" />
+            <img 
+                src={window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? LogoWhite : Logo} 
+                alt="" 
+                className="home__logo" 
+            />
             <SearchInput />
             <div className="home__buttons--wrapper">
                 <button 

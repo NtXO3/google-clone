@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useSearchState } from 'services/search';
 import { SearchResult, SearchResultItem } from '../SearchResult';
+import mockData from 'response.json'
 
 export const SearchContent: React.FC<SearchContentProps> = ({ type }) => {
     const { searchResults } = useSearchState()
