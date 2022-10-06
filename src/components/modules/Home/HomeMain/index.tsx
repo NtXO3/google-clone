@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from 'assets/static/Logo.png'
 import LogoWhite from 'assets/static/LogoWhite.png'
 import { SearchInput } from 'components/common/SearchInput';
-import { formatSearchQuery, useSearchState } from 'services/search';
+import { useSearchState } from 'services/search';
 
 export const HomeMain: React.FC<HomeMainProps> = () => {
     const navigate = useNavigate()
@@ -21,13 +21,13 @@ export const HomeMain: React.FC<HomeMainProps> = () => {
             <div className="home__buttons--wrapper">
                 <button 
                     className="home__search--btn" 
-                    onClick={() => navigate(`/search?q=${formatSearchQuery(search)}&page=1&type=all`)}
+                    onClick={() => navigate(`/search?q=${search}&page=1&type=all`)}
                 >
                     Google Search
                 </button>
                 <button 
                     className="home__search--btn" 
-                    onClick={() => navigate(`/search?q=${formatSearchQuery(search)}&page=1&type=all`)}
+                    onClick={() => navigate(`/search?q=${search}&page=1&type=all`)}
                 >
                     I'm Feeling Lucky
                 </button>

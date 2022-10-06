@@ -19,12 +19,8 @@ type SearchState = {
     setSearchResults: (results: SearchResultType | null) => void;
 }
 
-export const formatSearchQuery = (query: string) => {
-    return query.replace(' ', '+')
-}
-
 export const getSearchQuery = (query: string) => {
-    return query.slice(3).replace('+', ' ')
+    return query.slice(3).split('%20').join(' ')
 }
 
 export const searchLinks = [

@@ -1,10 +1,9 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getSearchResults } from 'queries/search';
 import * as React from 'react';
 
 import { MdSearch } from 'react-icons/md'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { formatSearchQuery, getSearchQuery, useSearchState } from 'services/search';
+import { getSearchQuery, useSearchState } from 'services/search';
 
 export const SearchInput: React.FC<SearchInputProps> = () => {
     const { search, setSearch, setSearchResults } = useSearchState();
@@ -12,12 +11,12 @@ export const SearchInput: React.FC<SearchInputProps> = () => {
     const navigate = useNavigate()
     
     const handleSearch = () => {
-        return navigate(`/search?q=${formatSearchQuery(search)}&page=1&type=all`)
+        return navigate(`/search?q=${search}&page=1&type=all`)
     }
 
     const fetchResults = async () => {
         const query = getSearchQuery(searchQuery.split('&')[0])
-        const data = await getSearchResults(formatSearchQuery(query), 1)
+        const data = await getSearchResults(query, 1)
         setSearchResults(data)
     }
 

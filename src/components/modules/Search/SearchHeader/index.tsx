@@ -2,7 +2,7 @@ import * as React from 'react';
 import Logo from 'assets/static/Logo.png'
 import LogoWhite from 'assets/static/LogoWhite.png'
 import { SearchInput } from 'components/common/SearchInput';
-import { formatSearchQuery, searchLinks, useSearchState } from 'services/search';
+import { searchLinks, useSearchState } from 'services/search';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export const SearchHeader: React.FC = () => {
@@ -29,7 +29,7 @@ export const SearchHeader: React.FC = () => {
                 {searchLinks.map((item) => (
                     <button 
                         className={`search__header--link ${checkIsActive(item.selector)} ${item.disabled && 'no-cursor'}`}
-                        onClick={() => !item.disabled && navigate(`/search?q=${formatSearchQuery(search)}&page=1${item.selector && `&type=${item.selector}`}`)}
+                        onClick={() => !item.disabled && navigate(`/search?q=${search}&page=1${item.selector && `&type=${item.selector}`}`)}
                     >
                         {item.icon}{item.title}
                     </button>

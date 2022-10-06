@@ -5,7 +5,7 @@ import { getSearchResults } from 'queries/search';
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { formatSearchQuery, getSearchQuery, useSearchState } from 'services/search';
+import { getSearchQuery, useSearchState } from 'services/search';
 
 const Search: React.FC = () => {
     const { search, setSearchResults, setSearch } = useSearchState()
@@ -13,7 +13,7 @@ const Search: React.FC = () => {
     const type = searchParams.split('&')[2]?.slice(5)
 
     const fetchResults = async () => {
-        const data = await getSearchResults(formatSearchQuery(search), 1)
+        const data = await getSearchResults(search, 1)
         setSearchResults(data)
     }
 
