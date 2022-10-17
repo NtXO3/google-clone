@@ -1,7 +1,7 @@
 import axios from "axios"
 
-const CONTEXT_KEY = '6edbd0bc76f18eed3'
-const API_KEY = 'AIzaSyD6V83HWQXqJmred1jXsXnPoeAMUJpvENA'
+const CONTEXT_KEY = process.env.REACT_APP_GOOGLE_CONTEXT_KEY;
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 export const getSearchResults = async (query: string, page: number) => {
     try {
